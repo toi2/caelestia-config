@@ -1,0 +1,8 @@
+"desktopClock": { "enabled": true }
+"status": {
+    "showAudio": true,
+    "showMicrophone": true,
+    "showNetwork": true,
+    "showWifi": true,
+    "showBluetooth": true
+}
