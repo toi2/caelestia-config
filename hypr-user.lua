@@ -3,4 +3,6 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("kdeconnect-indicator &")
     -- Start openLightsSync GUI 
     hl.exec_cmd("openLightsSync &")
+    -- Start QBittorrent
+    hl.exec_cmd("qbittorrent &")
 end)
