@@ -6,3 +6,27 @@ hl.on("hyprland.start", function()
     -- Start QBittorrent
     hl.exec_cmd("qbittorrent &")
 end)
+
+-- Window Rules for Special Workspaces
+hl.window_rule({
+    match = { class = "^(org.qbittorrent.qBittorrent)$" },
+    workspace = "special:torrent"
+})
+
+hl.window_rule({
+    match = { class = "^(openLightsSync)$" },
+    workspace = "special:lights"
+})
+
+-- Toggle Special Workspaces
+hl.bind("SUPER + ALT + Q", hl.dsp.exec_cmd("hyprctl dispatch togglespecialworkspace torrent"))
+hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd("hyprctl dispatch togglespecialworkspace lights"))
+
+-- Custom App Shortcuts
+hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
+
+-- Custom Screenshot Binds (Hyprshot with dark-themed selection)
+-- hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), { locked = true })
+-- hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), { locked = true })
+
+
