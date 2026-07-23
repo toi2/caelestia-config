@@ -19,8 +19,9 @@ hl.window_rule({
 })
 
 -- Toggle Special Workspaces
-hl.bind("SUPER + ALT + Q", hl.dsp.global("togglespecialworkspace", "torrent"))
-hl.bind("SUPER + ALT + L", hl.dsp.global("togglespecialworkspace", "lights"))
+-- Couldn't get it to work
+hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace torrent") end)
+hl.bind("SUPER + ALT + L", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace lights") end)
 
 -- Custom App Shortcuts
 hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
