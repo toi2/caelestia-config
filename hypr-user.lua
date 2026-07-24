@@ -5,6 +5,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("openLightsSync &")
     -- Start QBittorrent
     hl.exec_cmd("qbittorrent &")
+    hl.exec_cmd("crystal-dock &")
 end)
 
 -- Window Rules for Special Workspaces
