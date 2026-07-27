@@ -584,7 +584,7 @@
         "enableFprint": true,
         "enableHowdy": true,
         "enabled": true,
-        "hideNotifs": true,
+        "hideNotifs": false,
         "maxFprintTries": 3,
         "maxHowdyTries": 3,
         "recolourLogo": true,
