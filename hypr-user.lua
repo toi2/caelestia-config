@@ -31,4 +31,6 @@ hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
 -- hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), { locked = true })
 -- hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), { locked = true })
 
-
+-- Target discrete card1 on iMac
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
+hl.env("DRM_CARD", "card1")
