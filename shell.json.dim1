@@ -1,9 +1,4 @@
 {
-    "ai": {
-        "defaultOllamaModel": "llama3",
-        "enableCelestialMode": true,
-        "ollamaHistoryJson": "[{\"id\":\"chat_1785924791670\",\"title\":\"New Chat\",\"messages\":[{\"isUser\":true,\"text\":\"set brightness to 50%\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":true,\"text\":\"brightness 50\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"}]}]"
-    },
     "appearance": {
         "anim": {
             "durations": {
@@ -179,11 +174,9 @@
             },
             "workspaces": "Rubik"
         },
-        "islands": false,
         "padding": {
             "scale": 1
         },
-        "pitchBlack": false,
         "rounding": {
             "scale": 1
         },
@@ -201,12 +194,12 @@
             "background": {
                 "blur": true,
                 "enabled": false,
-                "opacity": 0
+                "opacity": 0.7
             },
             "enabled": true,
             "invertColors": false,
             "position": "top-right",
-            "scale": 1.101305509868421,
+            "scale": 1.15,
             "shadow": {
                 "blur": 0.4,
                 "enabled": true,
@@ -215,8 +208,8 @@
         },
         "desktopLyrics": {
             "alignment": 1,
+            "autoHide": true,
             "autoHideFullscreen": true,
-            "autoHideTiled": true,
             "background": {
                 "blur": true,
                 "enabled": false,
@@ -224,7 +217,6 @@
             },
             "enabled": true,
             "invertColors": false,
-            "overlay": true,
             "position": "bottom-center",
             "scale": 1,
             "shadow": {
@@ -234,9 +226,9 @@
             }
         },
         "enabled": true,
-        "videoWallpaperMuteOnMedia": true,
+        "videoWallpaperMuteOnMedia": false,
         "videoWallpaperPauseOnAllDisplays": false,
-        "videoWallpaperPauseOnFullscreen": true,
+        "videoWallpaperPauseOnFullscreen": false,
         "videoWallpaperPauseOnTiled": false,
         "videoWallpaperPaused": false,
         "videoWallpaperSoundEnabled": false,
@@ -256,13 +248,13 @@
             "showOnHover": true
         },
         "clock": {
-            "background": true,
+            "background": false,
             "showDate": true,
             "showIcon": true
         },
         "dock": {
             "monitorCenter": true,
-            "recolourIcons": false
+            "recolourIcons": true
         },
         "dragThreshold": 15,
         "entries": [
@@ -275,20 +267,12 @@
                 "id": "workspaces"
             },
             {
-                "enabled": false,
-                "id": "github"
-            },
-            {
                 "enabled": true,
                 "id": "spacer"
             },
             {
                 "enabled": true,
                 "id": "activeWindow"
-            },
-            {
-                "enabled": true,
-                "id": "dock"
             },
             {
                 "enabled": true,
@@ -328,12 +312,8 @@
         "showOnHover": true,
         "statusIcons": [
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "lockStatus"
-            },
-            {
-                "enabled": true,
-                "id": "network"
             },
             {
                 "enabled": true,
@@ -349,19 +329,15 @@
             },
             {
                 "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
                 "id": "bluetooth"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "battery"
-            },
-            {
-                "enabled": true,
-                "id": "peripheralBattery"
-            },
-            {
-                "enabled": true,
-                "id": "notifications"
             }
         ],
         "tray": {
@@ -379,7 +355,7 @@
             "activeTrail": true,
             "capitalisation": "preserve",
             "label": "  ",
-            "maxWindowIcons": 3,
+            "maxWindowIcons": 5,
             "occupiedBg": true,
             "occupiedLabel": "󰮯",
             "perMonitorWorkspaces": true,
@@ -418,7 +394,7 @@
             "showNetwork": true,
             "showStorage": true
         },
-        "profilePicShape": 12,
+        "profilePicShape": 13,
         "replaceMediaLyricsWithVisuals": false,
         "resourceUpdateInterval": 1000,
         "showDashboard": true,
@@ -644,9 +620,6 @@
         "enableDangerousActions": false,
         "enabled": true,
         "favouriteApps": [
-            "brave-browser",
-            "heroic",
-            "equibop"
         ],
         "favouriteClips": [
         ],
@@ -707,19 +680,18 @@
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
     "services": {
-        "audioIncrement": 0.05,
+        "audioIncrement": 0.1,
         "brightnessIncrement": 0.1,
         "defaultPlayer": "Spotify",
         "gpuType": "",
         "lyricsBackend": "Auto",
-        "maxVolume": 2,
+        "maxVolume": 1,
         "playerAliases": [
             {
                 "from": "com.github.th_ch.youtube_music",
                 "to": "YT Music"
             }
         ],
-        "quickShareAutoStart": true,
         "smartScheme": true,
         "useFahrenheit": false,
         "useFahrenheitPerformance": false,
@@ -766,7 +738,6 @@
         "dragThreshold": 80,
         "enabled": true,
         "minHoverThreshold": 200,
-        "showNews": false,
         "showOnHover": true
     },
     "utilities": {
@@ -774,20 +745,24 @@
         "maxToasts": 4,
         "quickToggles": [
             {
+                "enabled": false,
+                "id": "wallpaper"
+            },
+            {
+                "enabled": true,
+                "id": "badapple"
+            },
+            {
+                "enabled": true,
+                "id": "pauseWallpaper"
+            },
+            {
                 "enabled": true,
                 "id": "wifi"
             },
             {
                 "enabled": true,
                 "id": "bluetooth"
-            },
-            {
-                "enabled": true,
-                "id": "quickshare"
-            },
-            {
-                "enabled": true,
-                "id": "mic"
             },
             {
                 "enabled": true,
@@ -802,24 +777,8 @@
                 "id": "dnd"
             },
             {
-                "enabled": false,
-                "id": "vpn"
-            },
-            {
-                "enabled": false,
-                "id": "wallpaper"
-            },
-            {
                 "enabled": true,
-                "id": "badapple"
-            },
-            {
-                "enabled": true,
-                "id": "pauseWallpaper"
-            },
-            {
-                "enabled": false,
-                "id": "pipPause"
+                "id": "quickshare"
             }
         ],
         "toasts": {
@@ -835,7 +794,6 @@
             "kbLimit": true,
             "nowPlaying": true,
             "numLockChanged": true,
-            "transparency": true,
             "vpnChanged": true
         },
         "vpn": {

@@ -1,0 +1,238 @@
+{
+    "ai": {
+        "defaultOllamaModel": "llama3",
+        "enableCelestialMode": true,
+        "ollamaHistoryJson": "[{\"id\":\"chat_1785924791670\",\"title\":\"New Chat\",\"messages\":[{\"isUser\":true,\"text\":\"set brightness to 50%\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":true,\"text\":\"brightness 50\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"}]}]"
+    },
+    "appearance": {
+        "islands": false,
+        "pitchBlack": false,
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "background": {
+        "desktopClock": {
+            "background": {
+                "blur": true,
+                "enabled": false,
+                "opacity": 0
+            },
+            "enabled": true,
+            "invertColors": false,
+            "position": "top-right",
+            "scale": 1.101305509868421
+        },
+        "desktopLyrics": {
+            "autoHideFullscreen": true,
+            "autoHideTiled": true,
+            "background": {
+                "enabled": false
+            },
+            "enabled": true,
+            "overlay": true
+        },
+        "videoWallpaperMuteOnMedia": true,
+        "videoWallpaperPauseOnFullscreen": true,
+        "visualiser": {
+            "enabled": true
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": false
+        },
+        "clock": {
+            "background": true,
+            "showDate": true
+        },
+        "dock": {
+            "recolourIcons": false
+        },
+        "entries": [
+            {
+                "enabled": false,
+                "id": "logo"
+            },
+            {
+                "enabled": true,
+                "id": "workspaces"
+            },
+            {
+                "enabled": false,
+                "id": "github"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "activeWindow"
+            },
+            {
+                "enabled": true,
+                "id": "dock"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "tray"
+            },
+            {
+                "enabled": true,
+                "id": "clock"
+            },
+            {
+                "enabled": true,
+                "id": "statusIcons"
+            },
+            {
+                "enabled": true,
+                "id": "power"
+            }
+        ],
+        "position": "bottom",
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": false,
+                "id": "battery"
+            },
+            {
+                "enabled": true,
+                "id": "peripheralBattery"
+            },
+            {
+                "enabled": true,
+                "id": "notifications"
+            }
+        ],
+        "tray": {
+            "background": false,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeTrail": true,
+            "maxWindowIcons": 3,
+            "occupiedBg": true,
+            "shown": 5,
+            "useIcon": true
+        }
+    },
+    "dashboard": {
+        "performance": {
+            "showBattery": false
+        },
+        "profilePicShape": 12,
+        "showHyprlandSplash": true,
+        "syncMediaShapesToBeat": true,
+        "useMediaShapes": true
+    },
+    "launcher": {
+        "favouriteApps": [
+            "brave-browser",
+            "heroic",
+            "equibop",
+            "thunar"
+        ],
+        "useFuzzy": {
+            "actions": true,
+            "apps": true,
+            "schemes": true,
+            "variants": true,
+            "wallpapers": true
+        }
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "maxVolume": 2,
+        "quickShareAutoStart": true
+    },
+    "sidebar": {
+        "showNews": false
+    },
+    "utilities": {
+        "quickToggles": [
+            {
+                "enabled": true,
+                "id": "wifi"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "quickshare"
+            },
+            {
+                "enabled": true,
+                "id": "mic"
+            },
+            {
+                "enabled": true,
+                "id": "settings"
+            },
+            {
+                "enabled": true,
+                "id": "gameMode"
+            },
+            {
+                "enabled": true,
+                "id": "dnd"
+            },
+            {
+                "enabled": false,
+                "id": "vpn"
+            },
+            {
+                "enabled": false,
+                "id": "wallpaper"
+            },
+            {
+                "enabled": true,
+                "id": "badapple"
+            },
+            {
+                "enabled": true,
+                "id": "pauseWallpaper"
+            },
+            {
+                "enabled": false,
+                "id": "pipPause"
+            }
+        ],
+        "toasts": {
+            "transparency": true
+        }
+    }
+}

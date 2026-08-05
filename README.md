@@ -1,6 +1,6 @@
 # caelestia-config
 
-My personal configuration profiles, window manager integrations, and shell environments for the Caelestia shell.
+My personal configuration profiles, window manager integrations, and shell environments for the DIM's (update) Caelestia shell.
 
 ## Compatibility
 Optimized for **Arch Linux** and Arch-based distributions, including:
