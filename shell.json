@@ -227,7 +227,7 @@
             "showDate": true,
             "showIcon": true
         },
-        "dragThreshold": 20,
+        "dragThreshold": 15,
         "entries": [
             {
                 "enabled": false,
