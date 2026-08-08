@@ -191,9 +191,9 @@
             "scale": 1
         },
         "transparency": {
-            "base": 0.7463353207236842,
+            "base": 0.695276521381579,
             "enabled": true,
-            "layers": 0.2515111019736842
+            "layers": 0.09646895559210526
         }
     },
     "audio": {
@@ -249,8 +249,8 @@
         "videoWallpaperPaused": false,
         "videoWallpaperSoundEnabled": false,
         "visualiser": {
-            "autoHide": true,
-            "blur": true,
+            "autoHide": false,
+            "blur": false,
             "enabled": true,
             "rounding": 1,
             "spacing": 1
@@ -273,7 +273,7 @@
             "monitorCenter": true,
             "recolourIcons": false
         },
-        "dragThreshold": 15,
+        "dragThreshold": 50,
         "entries": [
             {
                 "enabled": false,
@@ -487,7 +487,6 @@
                 }
             ]
         },
-        "developerMode": true,
         "idle": {
             "inhibitWhenAudio": true,
             "inhibitWhenCharging": false,
@@ -725,16 +724,12 @@
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
     "services": {
-        "arpcEnabled": false,
         "audioIncrement": 0.05,
-        "bluetoothAutoReconnectDevices": [
-            "CE:73:55:5D:5A:86"
-        ],
-        "brightnessIncrement": 0.05,
+        "brightnessIncrement": 0.1,
         "defaultPlayer": "Spotify",
         "gpuType": "",
         "lyricsBackend": "Auto",
-        "maxVolume": 1.5,
+        "maxVolume": 2,
         "playerAliases": [
             {
                 "from": "com.github.th_ch.youtube_music",

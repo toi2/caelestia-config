@@ -1,0 +1,8 @@
+{
+    "appearance": {
+        "rounding": {
+            "extraSmall": 4,
+            "large": 16
+        }
+    }
+}
