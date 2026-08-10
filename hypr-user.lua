@@ -26,7 +26,8 @@ hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecia
 hl.bind("SUPER + ALT + L", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace lights") end)
 
 -- Custom App Shortcuts
-hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
+hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic")) -- Launches the Heroic Games Launcher
+hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus")) -- Launches the Nexus settings
 
 -- Custom Screenshot Binds (Hyprshot with dark-themed selection)
 -- hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), { locked = true })

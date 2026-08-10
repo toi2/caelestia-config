@@ -230,9 +230,9 @@
                 "enabled": false,
                 "opacity": 0.7
             },
-            "enabled": false,
+            "enabled": true,
             "invertColors": false,
-            "overlay": true,
+            "overlay": false,
             "position": "bottom-center",
             "scale": 1,
             "shadow": {
@@ -274,60 +274,54 @@
             "recolourIcons": false
         },
         "dragThreshold": 15,
-        "entries": [
-            {
-                "enabled": false,
-                "id": "logo"
-            },
-            {
-                "enabled": true,
-                "id": "workspaces"
-            },
-            {
-                "enabled": false,
-                "id": "github"
-            },
-            {
-                "enabled": true,
-                "id": "spacer"
-            },
-            {
-                "enabled": true,
-                "id": "activeWindow"
-            },
-            {
-                "enabled": true,
-                "id": "spacer"
-            },
-            {
-                "enabled": true,
-                "id": "spacer"
-            },
-            {
-                "enabled": true,
-                "id": "dock"
-            },
-            {
-                "enabled": true,
-                "id": "spacer"
-            },
-            {
-                "enabled": true,
-                "id": "tray"
-            },
-            {
-                "enabled": true,
-                "id": "clock"
-            },
-            {
-                "enabled": true,
-                "id": "statusIcons"
-            },
-            {
-                "enabled": true,
-                "id": "power"
-            }
-        ],
+        "entries": {
+            "center": [
+                {
+                    "enabled": true,
+                    "id": "dock"
+                }
+            ],
+            "end": [
+                {
+                    "enabled": true,
+                    "id": "spotify"
+                },
+                {
+                    "enabled": true,
+                    "id": "tray"
+                },
+                {
+                    "enabled": true,
+                    "id": "clock"
+                },
+                {
+                    "enabled": true,
+                    "id": "statusIcons"
+                },
+                {
+                    "enabled": true,
+                    "id": "power"
+                }
+            ],
+            "start": [
+                {
+                    "enabled": false,
+                    "id": "logo"
+                },
+                {
+                    "enabled": true,
+                    "id": "workspaces"
+                },
+                {
+                    "enabled": true,
+                    "id": "spacer"
+                },
+                {
+                    "enabled": true,
+                    "id": "activeWindow"
+                }
+            ]
+        },
         "excludedScreens": [
         ],
         "persistent": true,
@@ -343,6 +337,14 @@
             "workspaces": true
         },
         "showOnHover": true,
+        "spotify": {
+            "autoHide": true,
+            "background": true,
+            "horizontalVolume": false,
+            "inverted": false,
+            "maxTitleLength": 30,
+            "showVisualiser": true
+        },
         "statusIcons": [
             {
                 "enabled": true,
