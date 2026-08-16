@@ -1,15 +1,34 @@
--- Auto-start programs on startup
+local fn   = require("utils.functions")
+
+-- Flags
+local locked = { locked = true }
+
+------------------
+---- ENV OPTIONS -
+------------------
+
+hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
+hl.env("DRM_CARD", "card1")
+
+misc = {
+    middle_click_paste = true,
+}
+
+------------------
+---- AUTOSTART ---
+------------------
+
 hl.on("hyprland.start", function()
-    -- Start KDE Connect App in the Tray
-    hl.exec_cmd("kdeconnect-indicator &")
-    -- Start openLightsSync GUI 
+    -- hl.exec_cmd("kdeconnect-indicator &")
     hl.exec_cmd("openLightsSync &")
-    -- Start QBittorrent
     hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
 end)
 
--- Window Rules for Special Workspaces
+------------------
+-- WINDOW RULES --
+------------------
+
 hl.window_rule({
     match = { class = "^(org.qbittorrent.qBittorrent)$" },
     workspace = "special:torrent"
@@ -20,19 +39,23 @@ hl.window_rule({
     workspace = "special:lights"
 })
 
--- Toggle Special Workspaces
--- Couldn't get it to work
+------------------
+---- KEYBINDS ----
+------------------
+
+-- Custom App Binds
+hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
+hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus"))
+hl.bind("SUPER + SHIFT + W", hl.dsp.global("caelestia:wallpaper"))
+
+-- Special Workspaces
 hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace torrent") end)
 hl.bind("SUPER + ALT + L", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace lights") end)
 
--- Custom App Shortcuts
-hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic")) -- Launches the Heroic Games Launcher
-hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus")) -- Launches the Nexus settings
+-- Clear Upstream Screenshot Binds
+hl.unbind("Print")
+hl.unbind("SUPER + Print")
 
--- Custom Screenshot Binds (Hyprshot with dark-themed selection)
--- hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), { locked = true })
--- hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), { locked = true })
-
--- Target discrete card1 on iMac
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
-hl.env("DRM_CARD", "card1")
+-- Custom Screenshot Binds
+hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), locked)
+hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), locked)

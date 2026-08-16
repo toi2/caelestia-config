@@ -1,0 +1,8 @@
+{
+    "theme": {
+        "postHook": "sudo -n caelestia-greeter --sync"
+    },
+    "wallpaper": {
+        "postHook": "sudo -n caelestia-greeter --sync"
+    }
+}

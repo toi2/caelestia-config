@@ -2,7 +2,7 @@
     "ai": {
         "defaultOllamaModel": "llama3",
         "enableCelestialMode": true,
-        "ollamaHistoryJson": "[{\"id\":\"chat_1785924791670\",\"title\":\"New Chat\",\"messages\":[{\"isUser\":true,\"text\":\"set brightness to 50%\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":true,\"text\":\"brightness 50\",\"isFinished\":true,\"thoughtText\":\"\"},{\"isUser\":false,\"text\":\"Generation cancelled\",\"isFinished\":true,\"thoughtText\":\"\"}]}]"
+        "ollamaHistoryJson": "[]"
     },
     "appearance": {
         "anim": {
@@ -183,7 +183,7 @@
         "padding": {
             "scale": 1
         },
-        "pitchBlack": false,
+        "pitchBlack": true,
         "rounding": {
             "scale": 1
         },
@@ -191,14 +191,16 @@
             "scale": 1
         },
         "transparency": {
-            "base": 0.7463353207236842,
-            "enabled": true,
-            "layers": 0.2515111019736842
+            "base": 0.8480057565789474,
+            "enabled": false,
+            "layers": 0.8998355263157894
         }
     },
     "audio": {
         "sounds": {
+            "cameraClick": true,
             "chargingStarted": false,
+            "enabled": false,
             "lowBattery": false,
             "notificationVolume": 0.03560406595303867,
             "sfxVolume": 0.4022466332872928
@@ -230,7 +232,7 @@
                 "enabled": false,
                 "opacity": 0.7
             },
-            "enabled": true,
+            "enabled": false,
             "invertColors": false,
             "overlay": false,
             "position": "bottom-center",
@@ -251,7 +253,7 @@
         "visualiser": {
             "autoHide": true,
             "blur": true,
-            "enabled": true,
+            "enabled": false,
             "rounding": 1,
             "spacing": 1
         },
@@ -283,7 +285,7 @@
             ],
             "end": [
                 {
-                    "enabled": true,
+                    "enabled": false,
                     "id": "spotify"
                 },
                 {
@@ -314,11 +316,23 @@
                 },
                 {
                     "enabled": true,
+                    "id": "spotify"
+                },
+                {
+                    "enabled": true,
                     "id": "spacer"
                 },
                 {
                     "enabled": true,
                     "id": "activeWindow"
+                },
+                {
+                    "enabled": true,
+                    "id": "spacer"
+                },
+                {
+                    "enabled": false,
+                    "id": "github"
                 }
             ]
         },
@@ -342,12 +356,12 @@
             "background": true,
             "horizontalVolume": false,
             "inverted": false,
-            "maxTitleLength": 30,
+            "maxTitleLength": 28,
             "showVisualiser": true
         },
         "statusIcons": [
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "lockStatus"
             },
             {
@@ -363,7 +377,7 @@
                 "id": "microphone"
             },
             {
-                "enabled": false,
+                "enabled": true,
                 "id": "kbLayout"
             },
             {
@@ -371,16 +385,16 @@
                 "id": "bluetooth"
             },
             {
+                "enabled": true,
+                "id": "notifications"
+            },
+            {
                 "enabled": false,
                 "id": "battery"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "peripheralBattery"
-            },
-            {
-                "enabled": true,
-                "id": "notifications"
             }
         ],
         "tray": {
@@ -437,7 +451,7 @@
             "showNetwork": true,
             "showStorage": true
         },
-        "profilePicShape": 0,
+        "profilePicShape": 13,
         "replaceMediaLyricsWithVisuals": false,
         "resourceUpdateInterval": 1000,
         "showDashboard": true,
@@ -666,7 +680,10 @@
         "favouriteApps": [
             "brave-browser",
             "heroic",
-            "equibop"
+            "equibop",
+            "thunar",
+            "zen",
+            "com.obsproject.Studio"
         ],
         "favouriteClips": [
         ],
@@ -730,20 +747,22 @@
         "arpcEnabled": false,
         "audioIncrement": 0.05,
         "bluetoothAutoReconnectDevices": [
-            "CE:73:55:5D:5A:86"
+            "CE:73:55:5D:5A:86",
+            "E4:0A:B0:1D:E0:B2"
         ],
         "brightnessIncrement": 0.05,
         "defaultPlayer": "Spotify",
         "gpuType": "",
         "lyricsBackend": "Auto",
         "maxVolume": 1.5,
+        "pipPaused": false,
         "playerAliases": [
             {
                 "from": "com.github.th_ch.youtube_music",
                 "to": "YT Music"
             }
         ],
-        "quickShareAutoStart": true,
+        "quickShareAutoStart": false,
         "smartScheme": true,
         "useFahrenheit": false,
         "useFahrenheitPerformance": false,
@@ -779,7 +798,7 @@
     "shimeji": {
         "autoHide": true,
         "count": 3,
-        "enabled": true,
+        "enabled": false,
         "excludedScreens": [
         ],
         "path": "root:/assets/shimeji/pusheen/",
@@ -794,6 +813,10 @@
         "showOnHover": true
     },
     "utilities": {
+        "cards": {
+            "quickToggles": true,
+            "recorder": false
+        },
         "enabled": true,
         "maxToasts": 4,
         "quickToggles": [
@@ -838,7 +861,7 @@
                 "id": "badapple"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "pauseWallpaper"
             },
             {
@@ -859,7 +882,7 @@
             "kbLimit": true,
             "nowPlaying": true,
             "numLockChanged": true,
-            "transparency": true,
+            "transparency": false,
             "vpnChanged": true
         },
         "vpn": {
