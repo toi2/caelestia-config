@@ -19,7 +19,7 @@ hl.monitor({
     output   = "",
     mode     = "preferred",
     position = "auto",
-    scale    = 1,
+    scale    = 1.3,
 })
 
 ------------------
@@ -55,6 +55,7 @@ hl.window_rule({
 hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
 hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus"))
 hl.bind("SUPER + SHIFT + W", hl.dsp.global("caelestia:wallpaper"))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("spotify"))
 
 -- Special Workspaces
 hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace torrent") end)
