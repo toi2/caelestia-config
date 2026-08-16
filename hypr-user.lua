@@ -14,6 +14,14 @@ misc = {
     middle_click_paste = true,
 }
 
+-- Default monitor conf
+hl.monitor({
+    output   = "",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1,
+})
+
 ------------------
 ---- AUTOSTART ---
 ------------------
