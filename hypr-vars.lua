@@ -6,5 +6,5 @@ return {
     windowOpacity = 0.85,
     windowBorderSize = 2,
     volumeStep = 5,
-    volumeMax = 200,
+    volumeMax = 150,
 }

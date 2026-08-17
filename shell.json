@@ -200,9 +200,10 @@
         "sounds": {
             "cameraClick": true,
             "chargingStarted": false,
-            "enabled": false,
+            "enabled": true,
             "lowBattery": false,
-            "notificationVolume": 0.03560406595303867,
+            "notificationVolume": 0.05201139502762431,
+            "screenRecord": false,
             "sfxVolume": 0.4022466332872928
         }
     },
@@ -253,7 +254,7 @@
         "visualiser": {
             "autoHide": true,
             "blur": true,
-            "enabled": false,
+            "enabled": true,
             "rounding": 1,
             "spacing": 1
         },
@@ -307,7 +308,7 @@
             ],
             "start": [
                 {
-                    "enabled": false,
+                    "enabled": true,
                     "id": "logo"
                 },
                 {
@@ -767,7 +768,7 @@
         "useFahrenheit": false,
         "useFahrenheitPerformance": false,
         "useTwelveHourClock": true,
-        "visualiserBars": 36,
+        "visualiserBars": 30,
         "weatherLocation": "Dhaka"
     },
     "session": {

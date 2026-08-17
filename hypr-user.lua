@@ -14,12 +14,16 @@ misc = {
     middle_click_paste = true,
 }
 
+------------------
+----- Monitor ----
+------------------
+
 -- Default monitor conf
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = 1.3,
+    output   = "eDP-1",
+    mode     = "preffered",
+    position = "0x0",
+    scale    = 1.5,
 })
 
 ------------------
@@ -68,3 +72,4 @@ hl.unbind("SUPER + Print")
 -- Custom Screenshot Binds
 hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), locked)
 hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), locked)
+
