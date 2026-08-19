@@ -57,6 +57,12 @@ chmod +x setup.sh
 
 ---
 
+## How to 'UPDATE' 
+
+Simply run ```paru -Syyuu``` to update the whole system normally.
+
+---
+
 ## File Structure
 
 * `config.json` & `shell.json`: Main layout, module configuration, and behavioral settings for Caelestia Shell.
