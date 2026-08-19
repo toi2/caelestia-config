@@ -819,6 +819,10 @@
             "recorder": false
         },
         "enabled": true,
+        "gameMode": {
+            "autoEnableRegexes": [
+            ]
+        },
         "maxToasts": 4,
         "quickToggles": [
             {
