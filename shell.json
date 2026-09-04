@@ -217,7 +217,7 @@
             "enabled": true,
             "invertColors": false,
             "position": "top-right",
-            "scale": 1.0975534539473681,
+            "scale": 0.9991262335526313,
             "shadow": {
                 "blur": 0.4,
                 "enabled": true,
@@ -684,7 +684,8 @@
             "equibop",
             "thunar",
             "zen",
-            "com.obsproject.Studio"
+            "com.obsproject.Studio",
+            "DaVinciResolve"
         ],
         "favouriteClips": [
         ],

@@ -59,6 +59,7 @@ hl.window_rule({
 hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
 hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus"))
 hl.bind("SUPER + SHIFT + W", hl.dsp.global("caelestia:wallpaper"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd("equibop"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("spotify"))
 
 -- Special Workspaces
