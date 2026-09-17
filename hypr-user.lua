@@ -31,10 +31,11 @@ hl.monitor({
 ------------------
 
 hl.on("hyprland.start", function()
-    -- hl.exec_cmd("kdeconnect-indicator &")
-    hl.exec_cmd("openLightsSync &")
-    hl.exec_cmd("qbittorrent &")
+    hl.exec_cmd("kdeconnect-indicator &")
+    -- hl.exec_cmd("openLightsSync &")
+    -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
+    hl.exec_cmd("sudo mbpfan &")
 end)
 
 ------------------

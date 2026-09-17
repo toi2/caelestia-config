@@ -200,7 +200,7 @@
         "sounds": {
             "cameraClick": true,
             "chargingStarted": false,
-            "enabled": true,
+            "enabled": false,
             "lowBattery": false,
             "notificationVolume": 0.05201139502762431,
             "screenRecord": false,
@@ -226,8 +226,8 @@
         },
         "desktopLyrics": {
             "alignment": 1,
-            "autoHideFullscreen": true,
-            "autoHideTiled": true,
+            "autoHideFullscreen": false,
+            "autoHideTiled": false,
             "background": {
                 "blur": true,
                 "enabled": false,
@@ -235,7 +235,7 @@
             },
             "enabled": false,
             "invertColors": false,
-            "overlay": false,
+            "overlay": true,
             "position": "bottom-center",
             "scale": 1,
             "shadow": {
@@ -378,7 +378,7 @@
                 "id": "microphone"
             },
             {
-                "enabled": true,
+                "enabled": false,
                 "id": "kbLayout"
             },
             {
@@ -411,7 +411,7 @@
             "activeIndicator": true,
             "activeLabel": "󰮯",
             "activeTrail": true,
-            "capitalisation": "preserve",
+            "capitalisation": "Preserve",
             "label": "  ",
             "maxWindowIcons": 3,
             "occupiedBg": true,
@@ -477,7 +477,7 @@
                 "mpv"
             ],
             "terminal": [
-                "foot"
+                "kitty"
             ]
         },
         "battery": {
@@ -726,7 +726,7 @@
         "defaultExpireTimeout": 5000,
         "expandThreshold": 20,
         "expire": true,
-        "fullscreen": "on",
+        "fullscreen": "On",
         "fullscreenExpireTimeout": 2000,
         "groupPreviewNum": 3,
         "openExpanded": false
