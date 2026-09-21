@@ -1,11 +1,14 @@
 return {
     -- Apps
+    terminal                   = "kitty",
     browser                    = "brave",
     audioSettings              = "pavucontrol",
-    terminal                   = "kitty",
 
     -- Blur
     blurPasses                 = 1,
+
+    -- Shadow
+    shadowEnabled              = true,
 
     -- Window styling
     windowOpacity              = 0.85,

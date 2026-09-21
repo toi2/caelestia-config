@@ -745,13 +745,16 @@
         "wallpaperDir": "~/Pictures/Wallpapers"
     },
     "services": {
-        "arpcEnabled": false,
+        "arpcCaelestiaInfo": false,
+        "arpcEnabled": true,
+        "arpcSteamAutoDetect": true,
         "audioIncrement": 0.05,
         "bluetoothAutoReconnectDevices": [
             "CE:73:55:5D:5A:86",
             "E4:0A:B0:1D:E0:B2"
         ],
         "brightnessIncrement": 0.05,
+        "dataUnits": "Decimal",
         "defaultPlayer": "Spotify",
         "gpuType": "",
         "lyricsBackend": "Auto",
