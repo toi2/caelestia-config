@@ -531,7 +531,7 @@
                     "inhibitWhenCharging": false,
                     "respectInhibitors": true,
                     "returnAction": "dpms on",
-                    "timeout": 600
+                    "timeout": 900
                 }
             ]
         },
