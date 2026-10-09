@@ -6,6 +6,9 @@
         }
     },
     "sizes": {
+        "lock": {
+            "heightMult": 0.6534128289473684
+        },
         "osd": {
             "sliderHeight": 200,
             "sliderWidth": 40
