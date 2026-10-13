@@ -1,8 +1,13 @@
 {
     "ai": {
+        "activeProvider": "ollama",
         "defaultOllamaModel": "llama3",
         "enableCelestialMode": true,
-        "ollamaHistoryJson": "[]"
+        "ollamaHistoryJson": "[]",
+        "recentModels": [
+            "ollama|llama3",
+            "ollama|gemma"
+        ]
     },
     "appearance": {
         "anim": {
@@ -191,9 +196,9 @@
             "scale": 1
         },
         "transparency": {
-            "base": 0.8480057565789474,
+            "base": 0.897424958881579,
             "enabled": false,
-            "layers": 0.8998355263157894
+            "layers": 0.6493678042763158
         }
     },
     "audio": {
@@ -273,8 +278,7 @@
             "showIcon": true
         },
         "dock": {
-            "monitorCenter": true,
-            "recolourIcons": false
+            "monitorCenter": true
         },
         "dragThreshold": 15,
         "entries": {
@@ -783,7 +787,8 @@
         "useFahrenheitPerformance": false,
         "useTwelveHourClock": true,
         "visualiserBars": 30,
-        "weatherLocation": "Dhaka"
+        "weatherLocation": "Dhaka",
+        "weatherUnits": "Celsius"
     },
     "session": {
         "commands": {

@@ -52,6 +52,18 @@ hl.window_rule({
     workspace = "special:lights"
 })
 
+hl.window_rule({
+    match = { class = "^(notion-calendar)$" },
+    float = true,
+    -- Size: 1000px wide by 650px high (separated by a space)
+    size  = "1000 650",
+    -- Moves it relative to your display dimensions to sit in the bottom right corner
+    move  = "(monitor_w-window_w-20) (monitor_h-window_h-50)",
+})
+
+
+
+
 ------------------
 ---- KEYBINDS ----
 ------------------
@@ -62,6 +74,7 @@ hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus"))
 hl.bind("SUPER + SHIFT + W", hl.dsp.global("caelestia:wallpaper"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("equibop"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("spotify"))
+hl.bind("SUPER + C", hl.dsp.exec_cmd("notion-calendar"))
 
 -- Special Workspaces
 hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace torrent") end)
