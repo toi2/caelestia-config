@@ -61,9 +61,6 @@ hl.window_rule({
     move  = "(monitor_w-window_w-20) (monitor_h-window_h-50)",
 })
 
-
-
-
 ------------------
 ---- KEYBINDS ----
 ------------------
