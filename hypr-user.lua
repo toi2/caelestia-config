@@ -14,6 +14,17 @@ misc = {
     middle_click_paste = true,
 }
 
+-- Wrap input variables inside the global hl.config table
+hl.config({
+    input = {
+        scroll_method = "on_button_down",
+        scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
+        scroll_button_lock = false, -- Set to true if you want a click to toggle it on/off
+        scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
+    }
+})
+
+
 ------------------
 ----- Monitor ----
 ------------------
