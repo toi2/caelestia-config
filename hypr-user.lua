@@ -96,4 +96,12 @@ hl.unbind("SUPER + Print")
 hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), locked)
 hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), locked)
 
+-- Force Software Cursor Rendering
+hl.config({
+    cursor = {
+        no_hardware_cursors = true,
+        use_cpu_buffer = true
+    }
+})
+
 -- END
