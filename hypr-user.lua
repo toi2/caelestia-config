@@ -29,13 +29,33 @@ hl.config({
 ----- Monitor ----
 ------------------
 
--- Default monitor conf
-hl.monitor({
-    output   = "eDP-1",
-    mode     = "preffered",
-    position = "0x0",
-    scale    = 1.5,
-})
+local pc_monitor_connected = false
+local file = io.open("/sys/class/drm/card1-HDMI-A-1/status", "r")
+if file then
+    local status = file:read("*l")
+    file:close()
+    if status == "connected" then
+        pc_monitor_connected = true
+    end
+end
+
+if pc_monitor_connected then
+    -- Custom PC Monitor Configuration
+    hl.monitor({
+        output   = "HDMI-A-1",
+        mode     = "2560x1440@144",
+        position = "0x0",
+        scale    = 1,
+    })
+else
+    -- iMac Internal Display Configuration
+    hl.monitor({
+        output   = "eDP-1",
+        mode     = "preferred",
+        position = "0x0",
+        scale    = 1.5,
+    })
+end
 
 ------------------
 ---- AUTOSTART ---
@@ -44,7 +64,7 @@ hl.monitor({
 hl.on("hyprland.start", function()
     hl.exec_cmd("kdeconnect-indicator &")
     -- hl.exec_cmd("openLightsSync &")
-    -- hl.exec_cmd("qbittorrent &")
+    hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
     hl.exec_cmd("sudo mbpfan &")
 end)

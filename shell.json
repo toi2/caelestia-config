@@ -766,7 +766,8 @@
         "audioIncrement": 0.05,
         "bluetoothAutoReconnectDevices": [
             "CE:73:55:5D:5A:86",
-            "E4:0A:B0:1D:E0:B2"
+            "E4:0A:B0:1D:E0:B2",
+            "04:4B:ED:D5:01:FE"
         ],
         "brightnessIncrement": 0.05,
         "dataUnits": "Decimal",
