@@ -12,10 +12,6 @@ hl.env("DRM_CARD", "card1")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("NVD_BACKEND", "direct")
 
-misc = {
-    middle_click_paste = true,
-}
-
 -- Wrap input variables inside the global hl.config table
 hl.config({
     input = {
@@ -25,7 +21,9 @@ hl.config({
         scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
     },
     misc = {
+        middle_click_paste = true,
         vrr = 2,
+        allow_session_lock_restore = true,
     },
 })
 

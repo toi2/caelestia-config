@@ -721,8 +721,8 @@
         "vimKeybinds": false
     },
     "lock": {
-        "enableFprint": true,
-        "enableHowdy": true,
+        "enableFprint": false,
+        "enableHowdy": false,
         "enabled": true,
         "hideNotifs": false,
         "maxFprintTries": 3,
