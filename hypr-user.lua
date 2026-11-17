@@ -9,6 +9,8 @@ local locked = { locked = true }
 
 hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
 hl.env("DRM_CARD", "card1")
+hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("NVD_BACKEND", "direct")
 
 misc = {
     middle_click_paste = true,
@@ -21,7 +23,10 @@ hl.config({
         scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
         scroll_button_lock = false, -- Set to true if you want a click to toggle it on/off
         scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
-    }
+    },
+    misc = {
+        vrr = 2,
+    },
 })
 
 

@@ -196,9 +196,9 @@
             "scale": 1
         },
         "transparency": {
-            "base": 0.897424958881579,
+            "base": 0.8457802220394738,
             "enabled": false,
-            "layers": 0.6493678042763158
+            "layers": 0.592578125
         }
     },
     "audio": {
@@ -529,7 +529,7 @@
                     "timeout": 600
                 },
                 {
-                    "enabled": true,
+                    "enabled": false,
                     "idleAction": "dpms off",
                     "inhibitWhenAudio": false,
                     "inhibitWhenCharging": false,
