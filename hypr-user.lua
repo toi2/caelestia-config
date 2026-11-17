@@ -19,7 +19,7 @@ hl.config({
         repeat_delay = 250,         -- Delay in ms before repeat starts (default is 600)
         scroll_method = "on_button_down",
         scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
-        scroll_button_lock = false, -- Set to true if you want a click to toggle it on/off
+        scroll_button_lock = true,  -- Set to true if you want a click to toggle it on/off
         scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
     },
     misc = {
