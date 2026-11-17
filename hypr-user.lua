@@ -15,6 +15,8 @@ hl.env("NVD_BACKEND", "direct")
 -- Wrap input variables inside the global hl.config table
 hl.config({
     input = {
+        repeat_rate = 50,           -- Repeats per second (default is 25)
+        repeat_delay = 250,         -- Delay in ms before repeat starts (default is 600)
         scroll_method = "on_button_down",
         scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
         scroll_button_lock = false, -- Set to true if you want a click to toggle it on/off
@@ -99,6 +101,15 @@ hl.window_rule({
 ---- KEYBINDS ----
 ------------------
 
+-- Override Brightness Keys to Repeat on Hold
+local locked_repeating = { locked = true, repeating = true }
+
+hl.unbind("XF86MonBrightnessUp")
+hl.unbind("XF86MonBrightnessDown")
+
+hl.bind("XF86MonBrightnessUp", hl.dsp.global("caelestia:brightnessUp"), locked_repeating)
+hl.bind("XF86MonBrightnessDown", hl.dsp.global("caelestia:brightnessDown"), locked_repeating)
+
 -- Custom App Binds
 hl.bind("SUPER + H", hl.dsp.exec_cmd("heroic"))
 hl.bind("SUPER + SHIFT + X", hl.dsp.global("caelestia:nexus"))
@@ -128,3 +139,4 @@ hl.config({
 })
 
 -- END
+
