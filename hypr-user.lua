@@ -19,7 +19,7 @@ hl.config({
         repeat_delay = 250,         -- Delay in ms before repeat starts (default is 600)
         scroll_method = "on_button_down",
         scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
-        scroll_button_lock = true,  -- Set to true if you want a click to toggle it on/off
+        scroll_button_lock = false,  -- Set to true if you want a click to toggle it on/off (note that it will disable middle button fn of closing and opening)
         scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
     },
     misc = {
@@ -69,7 +69,7 @@ end
 hl.on("hyprland.start", function()
     hl.exec_cmd("kdeconnect-indicator &")
     -- hl.exec_cmd("openLightsSync &")
-    hl.exec_cmd("qbittorrent &")
+    -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
     hl.exec_cmd("sudo mbpfan &")
 end)
