@@ -33,11 +33,11 @@ hl.config({
         repeat_delay = 250,          -- Delay in ms before repeat starts (default is 600)
         scroll_method = "on_button_down",
         scroll_button = 274,         -- Standard middle mouse click ID (BTN_MIDDLE)
-        scroll_button_lock = false,  -- Set to true if you want a click to toggle it on/off
+        scroll_button_lock = false,  -- true=click toggle auto-scroll but lose middle click fn in web
         scroll_factor = 1.0,         -- Scroll speed 1.0=normal
     },
     misc = {
-        middle_click_paste = true,
+        middle_click_paste = true,   -- won't work when auto-scroll (scroll_button_down) is on
         vrr = 2,                     -- Enables G-Sync / Adaptive Sync in fullscreen apps & games
         allow_session_lock_restore = true,
     },
@@ -90,6 +90,9 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("openLightsSync &")
     -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
+    if pc_monitor_connected then
+        hl.exec_cmd("swaybg -o HDMI-A-1 -i /home/toitoi/Pictures/Wallpapers/v-purple-floating-islands-fantasy-landscape.jpg -m fill &")
+    end
 
     -- Only run Apple fan control daemon when booted on the iMac
     if not pc_monitor_connected then

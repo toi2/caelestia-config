@@ -1,4 +1,7 @@
 {
+    "background": {
+        "wallpaperEnabled": false
+    },
     "bar": {
         "activeWindow": {
             "compact": true
@@ -76,3 +79,4 @@
         "enabled": false
     }
 }
+
