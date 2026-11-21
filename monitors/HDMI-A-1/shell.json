@@ -1,2 +1,78 @@
 {
+    "bar": {
+        "activeWindow": {
+            "compact": true
+        },
+        "entries": {
+            "center": [
+                {
+                    "enabled": false,
+                    "id": "dock"
+                }
+            ],
+            "end": [
+                {
+                    "enabled": false,
+                    "id": "spotify"
+                },
+                {
+                    "enabled": false,
+                    "id": "tray"
+                },
+                {
+                    "enabled": true,
+                    "id": "clock"
+                },
+                {
+                    "enabled": false,
+                    "id": "statusIcons"
+                },
+                {
+                    "enabled": false,
+                    "id": "power"
+                }
+            ],
+            "start": [
+                {
+                    "enabled": false,
+                    "id": "logo"
+                },
+                {
+                    "enabled": true,
+                    "id": "workspaces"
+                },
+                {
+                    "enabled": false,
+                    "id": "spotify"
+                },
+                {
+                    "enabled": true,
+                    "id": "spacer"
+                },
+                {
+                    "enabled": true,
+                    "id": "activeWindow"
+                },
+                {
+                    "enabled": true,
+                    "id": "spacer"
+                },
+                {
+                    "enabled": false,
+                    "id": "github"
+                }
+            ]
+        },
+        "workspaces": {
+            "maxWindowIcons": 2,
+            "showUnoccupied": true,
+            "shown": 3
+        }
+    },
+    "dashboard": {
+        "enabled": false
+    },
+    "utilities": {
+        "enabled": false
+    }
 }

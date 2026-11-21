@@ -3,39 +3,9 @@ local fn   = require("utils.functions")
 -- Flags
 local locked = { locked = true }
 
-------------------
----- ENV OPTIONS -
-------------------
-
-hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
-hl.env("DRM_CARD", "card1")
-hl.env("LIBVA_DRIVER_NAME", "nvidia")
-hl.env("NVD_BACKEND", "direct")
-
--- Wrap input variables inside the global hl.config table
-hl.config({
-    input = {
-        repeat_rate = 50,           -- Repeats per second (default is 25)
-        repeat_delay = 250,         -- Delay in ms before repeat starts (default is 600)
-        scroll_method = "on_button_down",
-        scroll_button = 274,        -- Standard middle mouse click ID (BTN_MIDDLE)
-        scroll_button_lock = false,  -- Set to true if you want a click to toggle it on/off (note that it will disable middle button fn of closing and opening)
-        scroll_factor = 1.0,        -- Scroll speed 1.0=normal 
-    },
-    misc = {
-        middle_click_paste = true,
-        vrr = 2,
-        allow_session_lock_restore = true,
-    },
-})
-
-
-------------------
------ Monitor ----
-------------------
-
+-- Detect PC setup via DisplayPort connection (DP-1)
 local pc_monitor_connected = false
-local file = io.open("/sys/class/drm/card1-HDMI-A-1/status", "r")
+local file = io.open("/sys/class/drm/card1-DP-1/status", "r")
 if file then
     local status = file:read("*l")
     file:close()
@@ -44,13 +14,62 @@ if file then
     end
 end
 
+------------------
+---- ENV OPTIONS -
+------------------
+
 if pc_monitor_connected then
-    -- Custom PC Monitor Configuration
+    -- NVIDIA RTX 4060 PC Environment Variables
+    hl.env("AQ_DRM_DEVICES", "/dev/dri/card1")
+    hl.env("DRM_CARD", "card1")
+    hl.env("LIBVA_DRIVER_NAME", "nvidia")
+    hl.env("NVD_BACKEND", "direct")
+end
+
+-- Global Hyprland Config (Applies to both PC and iMac)
+hl.config({
+    input = {
+        repeat_rate = 50,            -- Repeats per second (default is 25)
+        repeat_delay = 250,          -- Delay in ms before repeat starts (default is 600)
+        scroll_method = "on_button_down",
+        scroll_button = 274,         -- Standard middle mouse click ID (BTN_MIDDLE)
+        scroll_button_lock = false,  -- Set to true if you want a click to toggle it on/off
+        scroll_factor = 1.0,         -- Scroll speed 1.0=normal
+    },
+    misc = {
+        middle_click_paste = true,
+        vrr = 2,                     -- Enables G-Sync / Adaptive Sync in fullscreen apps & games
+        allow_session_lock_restore = true,
+    },
+    cursor = {
+        no_hardware_cursors = true,
+        use_cpu_buffer = true,
+    },
+})
+
+------------------
+----- Monitor ----
+------------------
+
+if pc_monitor_connected then
+    -- 1. Main Monitor: Koorui 27" (1440p, 144Hz, 10-bit Color)
     hl.monitor({
-        output   = "HDMI-A-1",
+        output   = "DP-1",
         mode     = "2560x1440@144",
         position = "0x0",
         scale    = 1,
+        bitdepth = 10,
+    })
+
+    -- 2. Secondary Monitor: Philips 193V5 (Right side, rotated, 8-bit sRGB)
+    hl.monitor({
+        output    = "HDMI-A-1",
+        mode      = "preferred",
+        position  = "auto-center-right", -- auto=calculates pixels, center align, left/right/up/down
+        scale     = 0.67,        -- default=1
+        transform = 1,        -- 1 = 90° clockwise | 3 = 90° counter-clockwise | 0 = Normal
+        bitdepth  = 8,        -- Standard 8-bit color for HDMI
+        cm        = "srgb",   -- Clamps color space to sRGB
     })
 else
     -- iMac Internal Display Configuration
@@ -71,7 +90,11 @@ hl.on("hyprland.start", function()
     -- hl.exec_cmd("openLightsSync &")
     -- hl.exec_cmd("qbittorrent &")
     hl.exec_cmd("crystal-dock &")
-    hl.exec_cmd("sudo mbpfan &")
+
+    -- Only run Apple fan control daemon when booted on the iMac
+    if not pc_monitor_connected then
+        hl.exec_cmd("sudo mbpfan &")
+    end
 end)
 
 ------------------
@@ -123,20 +146,12 @@ hl.bind("SUPER + ALT + Q", function() hl.exec_cmd("hyprctl dispatch togglespecia
 hl.bind("SUPER + ALT + L", function() hl.exec_cmd("hyprctl dispatch togglespecialworkspace lights") end)
 
 -- Clear Upstream Screenshot Binds
-hl.unbind("Print")
-hl.unbind("SUPER + Print")
+-- hl.unbind("Print")
+-- hl.unbind("SUPER + Print")
+hl.unbind("SUPER + SHIFT + S")
 
 -- Custom Screenshot Binds
-hl.bind("Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), locked)
+hl.bind("SUPER + SHIFT + S", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region --clipboard-only"), locked)
 hl.bind("SUPER + Print", hl.dsp.exec_cmd("env HYPRSHOT_MINIMUM_ARGS='--color=202020aa --border-color=3b4252ff' hyprshot -m region"), locked)
 
--- Force Software Cursor Rendering
-hl.config({
-    cursor = {
-        no_hardware_cursors = true,
-        use_cpu_buffer = true
-    }
-})
-
 -- END
-

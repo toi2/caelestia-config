@@ -7,14 +7,17 @@
     },
     "sizes": {
         "lock": {
-            "heightMult": 0.6534128289473684
+            "heightMult": 0.6647358141447368
         },
         "osd": {
             "sliderHeight": 200,
             "sliderWidth": 40
         },
         "session": {
-            "button": 90
+            "button": 70
+        },
+        "utilities": {
+            "width": 400
         }
     }
 }
